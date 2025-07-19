@@ -1,0 +1,549 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 180 25% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 180 25% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 25% 25%;
+    --primary: 174 72% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 76%;
+    --secondary-foreground: 180 25% 25%;
+    --muted: 174 20% 95%;
+    --muted-foreground: 174 15% 45%;
+    --accent: 174 72% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 174 20% 90%;
+    --input: 174 20% 90%;
+    --ring: 174 72% 56%;
+    --radius: 0.75rem;
+
+    /* Oasis Theme Colors - Matching the website */
+    --oasis-yellow: 45 100% 75%; /* Warm golden yellow */
+    --oasis-yellow-light: 48 100% 85%; /* Lighter yellow */
+    --oasis-green: 140 65% 55%; /* Vibrant palm green */
+    --oasis-green-dark: 140 70% 45%; /* Darker green */
+    --oasis-orange: 25 95% 65%; /* Warm coral orange */
+    --oasis-orange-light: 30 100% 75%; /* Lighter orange */
+    --oasis-teal: 174 72% 56%; /* Keeping existing teal */
+    --oasis-sand: 40 85% 85%; /* Sandy beige */
+  }
+
+  .dark {
+    --background: 180 25% 8%;
+    --foreground: 174 20% 95%;
+    --card: 180 25% 10%;
+    --card-foreground: 174 20% 95%;
+    --popover: 180 25% 10%;
+    --popover-foreground: 174 20% 95%;
+    --primary: 174 72% 56%;
+    --primary-foreground: 180 25% 8%;
+    --secondary: 180 25% 15%;
+    --secondary-foreground: 174 20% 95%;
+    --muted: 180 25% 15%;
+    --muted-foreground: 174 15% 65%;
+    --accent: 180 25% 15%;
+    --accent-foreground: 174 20% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 180 25% 15%;
+    --input: 180 25% 15%;
+    --ring: 174 72% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  /* Oasis Theme Gradients */
+  .oasis-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--oasis-yellow)) 0%,
+      hsl(var(--oasis-orange)) 50%,
+      hsl(var(--oasis-green)) 100%
+    );
+  }
+
+  .oasis-warm-gradient {
+    background: linear-gradient(135deg, hsl(var(--oasis-yellow-light)) 0%, hsl(var(--oasis-orange-light)) 100%);
+  }
+
+  .oasis-tropical-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--oasis-yellow)) 0%,
+      hsl(var(--oasis-orange)) 40%,
+      hsl(var(--oasis-green)) 100%
+    );
+  }
+
+  .oasis-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--oasis-green)) 0%, hsl(var(--oasis-green-dark)) 100%);
+  }
+
+  /* Individual Colors */
+  .oasis-teal {
+    background-color: hsl(var(--oasis-teal));
+  }
+
+  .oasis-yellow {
+    background-color: hsl(var(--oasis-yellow));
+  }
+
+  .oasis-orange {
+    background-color: hsl(var(--oasis-orange));
+  }
+
+  .oasis-green {
+    background-color: hsl(var(--oasis-green));
+  }
+
+  .oasis-sand {
+    background-color: hsl(var(--oasis-sand));
+  }
+
+  /* Text truncation utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Subtle organic shapes for better readability */
+  .organic-blob {
+    border-radius: 20px 28px 24px 32px / 28px 24px 32px 20px;
+    position: relative;
+  }
+
+  .organic-blob-2 {
+    border-radius: 24px 32px 28px 20px / 32px 20px 28px 24px;
+    position: relative;
+  }
+
+  .organic-blob-subtle {
+    border-radius: 18px 26px 22px 30px / 26px 22px 30px 18px;
+  }
+
+  /* Touch-friendly interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\:shadow-xl:hover {
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+    }
+  }
+
+  /* Tropical decorative elements */
+  .palm-shadow {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  }
+}
+
+/* Smooth scrolling for mobile - but not for navigation */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ===== OASIS ANIMATIONS ===== */
+
+/* Palm Tree Animations */
+@keyframes palm-sway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes leaf-flutter {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(5deg) scale(0.95);
+  }
+}
+
+.palm-tree-container {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.palm-tree-small {
+  transform: scale(0.7);
+}
+
+.palm-tree {
+  position: relative;
+  animation: palm-sway 6s ease-in-out infinite;
+}
+
+.palm-trunk {
+  width: 12px;
+  height: 120px;
+  background: linear-gradient(to bottom, #8b4513 0%, #a0522d 50%, #8b4513 100%);
+  border-radius: 6px;
+  position: relative;
+  box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.palm-leaves {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.leaf {
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background: linear-gradient(45deg, #228b22 0%, #32cd32 50%, #228b22 100%);
+  border-radius: 4px;
+  transform-origin: 0 50%;
+  animation: leaf-flutter 4s ease-in-out infinite;
+}
+
+.leaf-1 {
+  transform: rotate(-45deg);
+  animation-delay: 0s;
+}
+
+.leaf-2 {
+  transform: rotate(-15deg);
+  animation-delay: 0.5s;
+}
+
+.leaf-3 {
+  transform: rotate(15deg);
+  animation-delay: 1s;
+}
+
+.leaf-4 {
+  transform: rotate(45deg);
+  animation-delay: 1.5s;
+}
+
+.leaf-5 {
+  transform: rotate(75deg);
+  animation-delay: 2s;
+}
+
+/* Floating Islands */
+@keyframes island-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+.floating-island {
+  z-index: 1;
+  pointer-events: none;
+  animation: island-float 8s ease-in-out infinite;
+}
+
+.island-1 {
+  animation-delay: 0s;
+}
+
+.island-2 {
+  animation-delay: 2s;
+}
+
+.island-3 {
+  animation-delay: 4s;
+}
+
+.island-base {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(to bottom, #deb887 0%, #d2b48c 100%);
+  border-radius: 50px 50px 20px 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.island-vegetation {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 16px;
+  background: linear-gradient(to top, #228b22 0%, #32cd32 100%);
+  border-radius: 50% 50% 0 0;
+}
+
+/* Flying Birds */
+@keyframes bird-fly {
+  0% {
+    transform: translateX(-100px) translateY(0px);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-20px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-10px);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-30px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(-5px);
+  }
+}
+
+@keyframes wing-flap {
+  0%,
+  100% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-20deg);
+  }
+}
+
+.birds-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bird {
+  position: absolute;
+  animation: bird-fly 25s linear infinite;
+}
+
+.bird-1 {
+  top: 15%;
+  animation-delay: 0s;
+}
+
+.bird-2 {
+  top: 25%;
+  animation-delay: 8s;
+  transform: scale(0.8);
+}
+
+.bird-3 {
+  top: 35%;
+  animation-delay: 16s;
+  transform: scale(0.6);
+}
+
+.bird-body {
+  width: 8px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+.wing {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #333;
+  border-radius: 50%;
+  animation: wing-flap 0.5s ease-in-out infinite;
+}
+
+.wing-left {
+  top: 1px;
+  left: -6px;
+  transform-origin: right center;
+}
+
+.wing-right {
+  top: 1px;
+  right: -6px;
+  transform-origin: left center;
+  animation-delay: 0.25s;
+}
+
+/* Floating Clouds */
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  z-index: 1;
+  pointer-events: none;
+  animation: cloud-drift 60s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+}
+
+.cloud-1 {
+  width: 80px;
+  height: 30px;
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.cloud-1::before {
+  width: 50px;
+  height: 40px;
+  top: -20px;
+  left: 10px;
+}
+
+.cloud-1::after {
+  width: 60px;
+  height: 35px;
+  top: -15px;
+  right: 10px;
+}
+
+.cloud-2 {
+  width: 60px;
+  height: 25px;
+  top: 20%;
+  animation-delay: 20s;
+  transform: scale(0.8);
+}
+
+.cloud-2::before {
+  width: 40px;
+  height: 30px;
+  top: -15px;
+  left: 8px;
+}
+
+.cloud-2::after {
+  width: 45px;
+  height: 28px;
+  top: -12px;
+  right: 8px;
+}
+
+.cloud-3 {
+  width: 70px;
+  height: 28px;
+  top: 30%;
+  animation-delay: 40s;
+  transform: scale(0.6);
+}
+
+.cloud-3::before {
+  width: 45px;
+  height: 35px;
+  top: -18px;
+  left: 12px;
+}
+
+.cloud-3::after {
+  width: 50px;
+  height: 32px;
+  top: -14px;
+  right: 12px;
+}
+
+/* Original animations */
+.palm-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .palm-tree-container {
+    transform: scale(0.6);
+  }
+
+  .floating-island {
+    transform: scale(0.7);
+  }
+
+  .cloud {
+    transform: scale(0.8);
+  }
+}
