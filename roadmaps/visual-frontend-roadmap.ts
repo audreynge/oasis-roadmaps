@@ -38,11 +38,11 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         [
           this.createResource(
             "VS Code Installation",
-            "Download and setup Visual Studio Code",
-            "https://code.visualstudio.com/docs/setup/setup-overview",
+            "Download and set up Visual Studio Code",
+            "https://oasisneu.notion.site/Installing-Visual-Studio-Code-179807275e4881f79e82c00a75a73a44",
             "Documentation",
             "Beginner",
-            "1 hour",
+            "15 minutes",
           ),
           this.createResource(
             "Essential VS Code Extensions",
@@ -50,10 +50,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://code.visualstudio.com/docs/editor/extension-marketplace",
             "Article",
             "Beginner",
-            "30 minutes",
+            "15 minutes",
           ),
         ],
-        2,
+        0.5,
       ),
     )
 
@@ -72,10 +72,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works",
             "Article",
             "Beginner",
-            "3 hours",
+            "1 hour",
           ),
         ],
-        6,
+        1,
       ),
     )
 
@@ -91,10 +91,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
           this.createResource(
             "HTML Basics",
             "Learn HTML fundamentals",
-            "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+            "https://oasisneu.notion.site/HTML-Basics-179807275e4881638ff4f35f3c0556b3?pvs=25",
             "Documentation",
             "Beginner",
-            "15 hours",
+            "1 hour",
           ),
           this.createResource(
             "HTML Semantic Elements",
@@ -102,10 +102,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
             "Documentation",
             "Beginner",
-            "5 hours",
+            "1 hour",
           ),
         ],
-        25,
+        2,
       ),
     )
 
@@ -119,27 +119,19 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         { x: 600, y: 410 },
         [
           this.createResource(
-            "CSS Basics",
+            "CSS",
             "Learn CSS fundamentals",
-            "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+            "https://oasisneu.notion.site/CSS-179807275e4881c8b4ecf68704c2a380?pvs=25",
             "Documentation",
             "Beginner",
-            "20 hours",
-          ),
-          this.createResource(
-            "CSS Selectors",
-            "Master CSS selectors",
-            "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors",
-            "Documentation",
-            "Beginner",
-            "5 hours",
+            "2 hours",
           ),
         ],
-        30,
+        2,
       ),
     )
 
-    // Row 5: Advanced CSS Layout (Branching makes sense here)
+    // Row 5: Advanced CSS Layout
     this.addNode(
       this.createNode(
         "css-flexbox",
@@ -165,7 +157,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "2 hours",
           ),
         ],
-        8,
+        6,
       ),
     )
 
@@ -194,7 +186,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "2 hours",
           ),
         ],
-        10,
+        7,
       ),
     )
 
@@ -213,7 +205,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://web.dev/responsive-web-design-basics/",
             "Article",
             "Intermediate",
-            "8 hours",
+            "2 hours",
           ),
           this.createResource(
             "Media Queries Guide",
@@ -221,10 +213,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries",
             "Documentation",
             "Intermediate",
-            "4 hours",
+            "1 hour",
           ),
         ],
-        15,
+        3,
       ),
     )
 
@@ -238,12 +230,12 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         { x: 600, y: 680 },
         [
           this.createResource(
-            "Build a Personal Portfolio",
+            "Web esssentials",
             "Step-by-step guide to your first website",
-            "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+            "https://oasisneu.notion.site/Web-Essentials-HTML-CSS-JS-179807275e4881ac8b66e39e90dbf4b0?pvs=25",
             "Course",
             "Beginner",
-            "8 hours",
+            "3 hours",
           ),
           this.createResource(
             "HTML/CSS Project Ideas",
@@ -251,10 +243,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://www.frontendmentor.io/challenges",
             "Tool",
             "Beginner",
-            "10 hours",
+            "5 hours",
           ),
         ],
-        15,
+        8,
       ),
     )
 
@@ -270,10 +262,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
           this.createResource(
             "Git Handbook",
             "Learn Git version control",
-            "https://guides.github.com/introduction/git-handbook/",
+            "https://oasisneu.notion.site/Version-Control-179807275e48811996f7dce1a0359a21?pvs=25",
             "Documentation",
             "Beginner",
-            "8 hours",
+            "2 hours",
           ),
           this.createResource(
             "GitHub Desktop",
@@ -283,8 +275,16 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Beginner",
             "2 hours",
           ),
+          this.createResource(
+            "GitHub Codespaces",
+            "Ready-to-code Git environment on the web",
+            "https://oasisneu.notion.site/Codespaces-179807275e48819f8119e339c4507afd",
+            "Tool",
+            "Beginner",
+            "30 minutes",
+          ),
         ],
-        12,
+        4.5,
       ),
     )
 
@@ -300,10 +300,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
           this.createResource(
             "JavaScript Fundamentals",
             "Learn JavaScript from scratch",
-            "https://javascript.info/",
+            "https://oasisneu.notion.site/JavaScript-179807275e48817ea69bc204e52417f3?pvs=25",
             "Course",
             "Beginner",
-            "40 hours",
+            "3 hours",
           ),
           this.createResource(
             "JavaScript DOM Manipulation",
@@ -311,10 +311,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
             "Documentation",
             "Intermediate",
-            "10 hours",
+            "2 hours",
           ),
         ],
-        60,
+        5,
       ),
     )
 
@@ -328,31 +328,23 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         { x: 600, y: 950 },
         [
           this.createResource(
+            "Building a RESTful API",
+            "Understanding REST principles",
+            "https://oasisneu.notion.site/Building-A-RESTful-API-Oasis-Roster-179807275e488139a9a1f02fe4ff37ab?pvs=25",
+            "Article",
+            "Intermediate",
+            "3 hours",
+          ),
+          this.createResource(
             "Fetch API Guide",
             "Learn to make HTTP requests",
             "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
             "Documentation",
             "Intermediate",
-            "8 hours",
-          ),
-          this.createResource(
-            "REST API Basics",
-            "Understanding REST principles",
-            "https://restfulapi.net/",
-            "Article",
-            "Intermediate",
-            "4 hours",
-          ),
-          this.createResource(
-            "JSONPlaceholder",
-            "Free fake API for testing",
-            "https://jsonplaceholder.typicode.com/",
-            "Tool",
-            "Beginner",
             "2 hours",
           ),
         ],
-        15,
+        5,
       ),
     )
 
@@ -366,23 +358,23 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         { x: 600, y: 1040 },
         [
           this.createResource(
+            "React Basics",
+            "Learn React components and JSX",
+            "https://oasisneu.notion.site/React-Basics-Setup-State-Props-179807275e4881a380ece2706395839b",
+            "Documentation",
+            "Intermediate",
+            "4 hours",
+          ),
+          this.createResource(
             "React Documentation",
             "Official React tutorial",
             "https://react.dev/learn",
             "Documentation",
             "Intermediate",
-            "30 hours",
-          ),
-          this.createResource(
-            "React Components Guide",
-            "Learn React components and JSX",
-            "https://react.dev/learn/your-first-component",
-            "Documentation",
-            "Intermediate",
-            "10 hours",
+            "3 hours",
           ),
         ],
-        50,
+        7,
       ),
     )
 
@@ -396,23 +388,15 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         { x: 600, y: 1130 },
         [
           this.createResource(
-            "TypeScript Handbook",
+            "TypeScript",
             "Learn TypeScript",
-            "https://www.typescriptlang.org/docs/",
+            "https://oasisneu.notion.site/TypeScript-179807275e48815e8acdc413110a90ea?pvs=25",
             "Documentation",
             "Intermediate",
-            "20 hours",
-          ),
-          this.createResource(
-            "React with TypeScript",
-            "Using TypeScript in React projects",
-            "https://react-typescript-cheatsheet.netlify.app/",
-            "Article",
-            "Intermediate",
-            "8 hours",
+            "2 hours",
           ),
         ],
-        30,
+        2,
       ),
     )
 
@@ -431,7 +415,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://testing-library.com/docs/",
             "Documentation",
             "Intermediate",
-            "12 hours",
+            "2 hours",
           ),
           this.createResource(
             "Jest Testing Framework",
@@ -439,10 +423,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://jestjs.io/docs/getting-started",
             "Documentation",
             "Intermediate",
-            "8 hours",
+            "2 hours",
           ),
         ],
-        20,
+        4,
       ),
     )
 
@@ -461,7 +445,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://vitejs.dev/guide/",
             "Documentation",
             "Intermediate",
-            "6 hours",
+            "2 hours",
           ),
           this.createResource(
             "NPM Guide",
@@ -469,10 +453,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://docs.npmjs.com/getting-started",
             "Documentation",
             "Beginner",
-            "4 hours",
+            "1 hours",
           ),
         ],
-        12,
+        3,
       ),
     )
 
