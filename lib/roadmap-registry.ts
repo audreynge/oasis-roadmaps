@@ -1,16 +1,14 @@
 import type { BaseRoadmap } from "../types/roadmap"
-import { VisualFrontendRoadmap } from "../roadmaps/visual-frontend-roadmap"
-import { VisualBackendRoadmap } from "../roadmaps/visual-backend-roadmap"
-import { VisualFullStackRoadmap } from "../roadmaps/visual-fullstack-roadmap"
-import { VisualDataScienceRoadmap } from "../roadmaps/visual-data-science-roadmap"
-import { VisualIOSRoadmap } from "../roadmaps/visual-ios-roadmap"
+import { VisualFrontendRoadmap } from "../roadmaps/FrontendRoadmap"
+import { VisualBackendRoadmap } from "../roadmaps/BackendRoadmap"
+import { VisualFullStackRoadmap } from "../roadmaps/FullstackRoadmap"
+import { VisualIOSRoadmap } from "../roadmaps/IosRoadmap"
 
 export class RoadmapRegistry {
   private static roadmaps: Map<string, () => BaseRoadmap> = new Map([
     ["frontend", () => new VisualFrontendRoadmap()],
     ["backend", () => new VisualBackendRoadmap()],
     ["fullstack", () => new VisualFullStackRoadmap()],
-    ["data-science", () => new VisualDataScienceRoadmap()],
     ["ios", () => new VisualIOSRoadmap()],
   ])
 

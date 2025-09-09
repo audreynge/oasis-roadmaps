@@ -22,7 +22,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
 
   initializeVisualRoadmap(): void {
     this.visualData.width = 1200
-    this.visualData.height = 1500
+    this.visualData.height = 1400
 
     // Start
     this.addNode(this.createNode("start", "START", "Begin your frontend journey", "start", { x: 600, y: 50 }, [], 0))
@@ -33,7 +33,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         "vscode-setup",
         "VS Code Setup",
         "Install and configure your code editor",
-        "tool",
+        "skill",
         { x: 600, y: 140 },
         [
           this.createResource(
@@ -92,14 +92,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "HTML Basics",
             "Learn HTML fundamentals",
             "https://oasisneu.notion.site/HTML-Basics-179807275e4881638ff4f35f3c0556b3?pvs=25",
-            "Documentation",
-            "Beginner",
-            "1 hour",
-          ),
-          this.createResource(
-            "HTML Semantic Elements",
-            "Learn semantic HTML structure",
-            "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
             "Documentation",
             "Beginner",
             "1 hour",
@@ -207,14 +199,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Intermediate",
             "2 hours",
           ),
-          this.createResource(
-            "Media Queries Guide",
-            "Master CSS media queries",
-            "https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries",
-            "Documentation",
-            "Intermediate",
-            "1 hour",
-          ),
         ],
         3,
       ),
@@ -237,14 +221,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Beginner",
             "3 hours",
           ),
-          this.createResource(
-            "HTML/CSS Project Ideas",
-            "Simple projects to practice your skills",
-            "https://www.frontendmentor.io/challenges",
-            "Tool",
-            "Beginner",
-            "5 hours",
-          ),
         ],
         8,
       ),
@@ -256,7 +232,7 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         "version-control",
         "Version Control",
         "Git & GitHub basics",
-        "tool",
+        "skill",
         { x: 600, y: 770 },
         [
           this.createResource(
@@ -267,24 +243,8 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Beginner",
             "2 hours",
           ),
-          this.createResource(
-            "GitHub Desktop",
-            "Visual Git interface for beginners",
-            "https://desktop.github.com/",
-            "Tool",
-            "Beginner",
-            "2 hours",
-          ),
-          this.createResource(
-            "GitHub Codespaces",
-            "Ready-to-code Git environment on the web",
-            "https://oasisneu.notion.site/Codespaces-179807275e48819f8119e339c4507afd",
-            "Tool",
-            "Beginner",
-            "30 minutes",
-          ),
         ],
-        4.5,
+        2,
       ),
     )
 
@@ -335,16 +295,8 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Intermediate",
             "3 hours",
           ),
-          this.createResource(
-            "Fetch API Guide",
-            "Learn to make HTTP requests",
-            "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
-            "Documentation",
-            "Intermediate",
-            "2 hours",
-          ),
         ],
-        5,
+        3,
       ),
     )
 
@@ -364,14 +316,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "Documentation",
             "Intermediate",
             "4 hours",
-          ),
-          this.createResource(
-            "React Documentation",
-            "Official React tutorial",
-            "https://react.dev/learn",
-            "Documentation",
-            "Intermediate",
-            "3 hours",
           ),
         ],
         7,
@@ -400,66 +344,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
       ),
     )
 
-    // Row 13: Testing
-    this.addNode(
-      this.createNode(
-        "testing",
-        "Testing",
-        "Jest, React Testing Library",
-        "skill",
-        { x: 600, y: 1220 },
-        [
-          this.createResource(
-            "Testing Library",
-            "Learn React testing",
-            "https://testing-library.com/docs/",
-            "Documentation",
-            "Intermediate",
-            "2 hours",
-          ),
-          this.createResource(
-            "Jest Testing Framework",
-            "JavaScript testing framework",
-            "https://jestjs.io/docs/getting-started",
-            "Documentation",
-            "Intermediate",
-            "2 hours",
-          ),
-        ],
-        4,
-      ),
-    )
-
-    // Row 14: Build Tools (Optional but recommended)
-    this.addNode(
-      this.createNode(
-        "build-tools",
-        "Build Tools",
-        "Vite, NPM, bundling",
-        "optional",
-        { x: 600, y: 1310 },
-        [
-          this.createResource(
-            "Vite Guide",
-            "Modern build tool",
-            "https://vitejs.dev/guide/",
-            "Documentation",
-            "Intermediate",
-            "2 hours",
-          ),
-          this.createResource(
-            "NPM Guide",
-            "Package management",
-            "https://docs.npmjs.com/getting-started",
-            "Documentation",
-            "Beginner",
-            "1 hours",
-          ),
-        ],
-        3,
-      ),
-    )
-
     // End
     this.addNode(
       this.createNode(
@@ -467,18 +351,17 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
         "FRONTEND DEVELOPER",
         "You're now a frontend developer!",
         "end",
-        { x: 600, y: 1400 },
+        { x: 600, y: 1250 },
         [],
         0,
       ),
     )
 
-    // Logical connections - Fixed branching
     this.addConnection({ from: "start", to: "vscode-setup", type: "required" })
     this.addConnection({ from: "vscode-setup", to: "web-fundamentals", type: "required" })
     this.addConnection({ from: "web-fundamentals", to: "html", type: "required" })
     this.addConnection({ from: "html", to: "css", type: "required" })
-    // CSS branches to both layout systems (makes sense here)
+    // CSS branches to both layout systems
     this.addConnection({ from: "css", to: "css-flexbox", type: "required" })
     this.addConnection({ from: "css", to: "css-grid", type: "required" })
     // Both converge to responsive design
@@ -490,9 +373,6 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
     this.addConnection({ from: "javascript", to: "rest-apis", type: "required" })
     this.addConnection({ from: "rest-apis", to: "react-basics", type: "required" })
     this.addConnection({ from: "react-basics", to: "typescript", type: "required" })
-    this.addConnection({ from: "typescript", to: "testing", type: "required" })
-    this.addConnection({ from: "testing", to: "build-tools", type: "optional" })
-    this.addConnection({ from: "build-tools", to: "end", type: "optional" })
-    this.addConnection({ from: "testing", to: "end", type: "required" })
+    this.addConnection({ from: "typescript", to: "end", type: "required" })
   }
 }

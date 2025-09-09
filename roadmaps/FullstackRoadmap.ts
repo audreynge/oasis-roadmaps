@@ -27,47 +27,33 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
     // Start
     this.addNode(this.createNode("start", "START", "Begin your full stack journey", "start", { x: 600, y: 50 }, [], 0))
 
-    // Row 1: Fundamentals
-    this.addNode(
-      this.createNode(
-        "web-fundamentals",
-        "Web Fundamentals",
-        "How the web works",
-        "topic",
-        { x: 600, y: 140 },
-        [
-          this.createResource(
-            "Web Fundamentals",
-            "Understanding web basics",
-            "https://web.dev/learn/",
-            "Course",
-            "Beginner",
-            "10 hours",
-          ),
-        ],
-        15,
-      ),
-    )
-
-    // Row 2: Frontend Foundation
+    // Row 1: Frontend Foundation
     this.addNode(
       this.createNode(
         "html-css",
         "HTML & CSS",
         "Frontend structure & styling",
         "skill",
-        { x: 600, y: 230 },
+        { x: 600, y: 200 },
         [
           this.createResource(
-            "HTML & CSS Guide",
-            "Learn HTML and CSS fundamentals",
-            "https://developer.mozilla.org/en-US/docs/Learn",
+            "HTML Guide",
+            "Learn HTML fundamentals",
+            "https://oasisneu.notion.site/HTML-Basics-179807275e4881638ff4f35f3c0556b3?pvs=23",
             "Documentation",
             "Beginner",
-            "30 hours",
+            "1 hour",
+          ),
+          this.createResource(
+            "CSS Guide",
+            "Learn CSS fundamentals",
+            "https://oasisneu.notion.site/CSS-179807275e4881c8b4ecf68704c2a380?pvs=23",
+            "Documentation",
+            "Beginner",
+            "2 hours",
           ),
         ],
-        40,
+        3,
       ),
     )
 
@@ -76,20 +62,20 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
       this.createNode(
         "javascript",
         "JavaScript",
-        "Programming language",
+        "Programming language of the web",
         "skill",
-        { x: 600, y: 320 },
+        { x: 600, y: 290 },
         [
           this.createResource(
             "JavaScript Guide",
             "Learn JavaScript fundamentals",
-            "https://javascript.info/",
+            "https://oasisneu.notion.site/JavaScript-179807275e48817ea69bc204e52417f3?pvs=23",
             "Course",
-            "Intermediate",
-            "40 hours",
+            "Beginner",
+            "3 hours",
           ),
         ],
-        50,
+        3,
       ),
     )
 
@@ -99,19 +85,19 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "git",
         "Git & GitHub",
         "Version control system",
-        "tool",
-        { x: 600, y: 410 },
+        "skill",
+        { x: 600, y: 380 },
         [
           this.createResource(
             "Git Handbook",
             "Learn version control",
-            "https://guides.github.com/introduction/git-handbook/",
+            "https://oasisneu.notion.site/Version-Control-179807275e48811996f7dce1a0359a21?pvs=23",
             "Documentation",
             "Beginner",
-            "10 hours",
+            "1 hour",
           ),
         ],
-        15,
+        1,
       ),
     )
 
@@ -122,18 +108,18 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "React",
         "Frontend framework",
         "skill",
-        { x: 600, y: 500 },
+        { x: 600, y: 470 },
         [
           this.createResource(
             "React Documentation",
             "Learn React framework",
-            "https://react.dev/learn",
+            "https://oasisneu.notion.site/React-Basics-Setup-State-Props-179807275e4881a380ece2706395839b",
             "Documentation",
             "Intermediate",
-            "40 hours",
+            "4 hours",
           ),
         ],
-        50,
+        7,
       ),
     )
 
@@ -144,7 +130,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Node.js",
         "Server-side JavaScript",
         "skill",
-        { x: 600, y: 590 },
+        { x: 600, y: 560 },
         [
           this.createResource(
             "Node.js Guide",
@@ -166,7 +152,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Express.js",
         "Backend framework",
         "skill",
-        { x: 600, y: 680 },
+        { x: 600, y: 650 },
         [
           this.createResource(
             "Express.js Guide",
@@ -188,18 +174,34 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Databases",
         "SQL & NoSQL databases",
         "skill",
-        { x: 600, y: 770 },
+        { x: 600, y: 740 },
         [
           this.createResource(
-            "Database Fundamentals",
-            "Learn database concepts",
-            "https://www.postgresqltutorial.com/",
+            "SQL Basics",
+            "Learn SQL basics",
+            "https://oasisneu.notion.site/SQL-Basics-179807275e4881d0a20edd0971f0db55?pvs=23",
+            "Course",
+            "Beginner",
+            "2 hours",
+          ),
+          this.createResource(
+            "Supabase Basics",
+            "Learn Supabase basics",
+            "https://oasisneu.notion.site/Supabase-Basics-179807275e4881708546f6dffb987fe3?pvs=23",
             "Course",
             "Intermediate",
-            "30 hours",
+            "2 hours",
+          ),
+          this.createResource(
+            "Query Practice",
+            "Practice querying Supabase",
+            "https://oasisneu.notion.site/Query-Practice-179807275e4881a89827e15a26dccd04?pvs=23",
+            "Course",
+            "Intermediate",
+            "1 hour",
           ),
         ],
-        40,
+        5,
       ),
     )
 
@@ -210,18 +212,26 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "REST APIs",
         "API development",
         "skill",
-        { x: 600, y: 860 },
+        { x: 600, y: 830 },
         [
           this.createResource(
-            "REST API Guide",
+            "APIs 101",
             "Learn API development",
-            "https://restfulapi.net/",
-            "Article",
+            "https://oasisneu.notion.site/APIs-101-179807275e4881c1b5ffeb5dcbd6eb12?pvs=23",
+            "Course",
             "Intermediate",
-            "12 hours",
+            "2 hours",
+          ),
+          this.createResource(
+            "Building a RESTful API",
+            "Learn how to build a RESTful API",
+            "https://oasisneu.notion.site/Building-A-RESTful-API-Oasis-Roster-179807275e488139a9a1f02fe4ff37ab?pvs=23",
+            "Course",
+            "Intermediate",
+            "3 hours",
           ),
         ],
-        18,
+        5,
       ),
     )
 
@@ -232,7 +242,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "API Integration",
         "Connect frontend & backend",
         "skill",
-        { x: 600, y: 950 },
+        { x: 600, y: 920 },
         [
           this.createResource(
             "API Integration Guide",
@@ -254,7 +264,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Authentication",
         "User login & security",
         "skill",
-        { x: 600, y: 1040 },
+        { x: 600, y: 1010 },
         [
           this.createResource(
             "Authentication Guide",
@@ -276,7 +286,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Personal Access Tokens",
         "API authentication & CI/CD",
         "skill",
-        { x: 600, y: 1130 },
+        { x: 600, y: 1100 },
         [
           this.createResource(
             "GitHub Personal Access Tokens",
@@ -306,18 +316,18 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "TypeScript",
         "Type-safe JavaScript",
         "skill",
-        { x: 600, y: 1220 },
+        { x: 600, y: 1190 },
         [
           this.createResource(
             "TypeScript Handbook",
             "Learn TypeScript",
-            "https://www.typescriptlang.org/docs/",
+            "https://oasisneu.notion.site/TypeScript-179807275e48815e8acdc413110a90ea?pvs=23",
             "Documentation",
             "Intermediate",
-            "25 hours",
+            "2 hours",
           ),
         ],
-        35,
+        2,
       ),
     )
 
@@ -328,15 +338,15 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Testing",
         "Frontend & Backend testing",
         "skill",
-        { x: 600, y: 1310 },
+        { x: 600, y: 1280 },
         [
           this.createResource(
-            "Testing Guide",
-            "Learn testing strategies",
+            "Unit Testing",
+            "Learn unit testing with Jest",
             "https://testing-library.com/docs/",
             "Documentation",
             "Intermediate",
-            "20 hours",
+            "2 hours",
           ),
         ],
         30,
@@ -348,20 +358,20 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
       this.createNode(
         "deployment",
         "Deployment",
-        "Cloud platforms & CI/CD",
-        "skill",
-        { x: 600, y: 1400 },
+        "Deployment platforms",
+        "topic",
+        { x: 600, y: 1370 },
         [
           this.createResource(
-            "Deployment Guide",
-            "Learn deployment strategies",
-            "https://vercel.com/docs",
+            "Netlify Deployment",
+            "Learn how to deploy your app on Netlify",
+            "https://oasisneu.notion.site/Deploy-your-site-179807275e4881e4bcc0e766119805fe",
             "Documentation",
             "Intermediate",
-            "12 hours",
+            "1 hour",
           ),
         ],
-        18,
+        1,
       ),
     )
 
@@ -372,7 +382,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Performance",
         "Optimization techniques",
         "optional",
-        { x: 400, y: 1490 },
+        { x: 400, y: 1460 },
         [
           this.createResource(
             "Web Performance",
@@ -388,12 +398,12 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
     )
 
     this.addNode(
-      this.createNode(
+      this.createNode(  
         "security",
         "Security",
         "Web security practices",
         "optional",
-        { x: 600, y: 1490 },
+        { x: 600, y: 1460 },
         [
           this.createResource(
             "Web Security",
@@ -414,7 +424,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "Microservices",
         "Distributed architecture",
         "optional",
-        { x: 800, y: 1490 },
+        { x: 800, y: 1460 },
         [
           this.createResource(
             "Microservices Guide",
@@ -436,7 +446,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
         "FULL STACK DEVELOPER",
         "You're now a full stack developer!",
         "end",
-        { x: 600, y: 1580 },
+        { x: 600, y: 1550 },
         [],
         0,
       ),

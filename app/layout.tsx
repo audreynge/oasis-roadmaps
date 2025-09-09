@@ -8,7 +8,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Oasis Learning Roadmaps",
   description: "Structured learning paths for frontend, backend, full-stack development, and data science",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

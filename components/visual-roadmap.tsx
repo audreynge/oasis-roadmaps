@@ -86,12 +86,14 @@ export function VisualRoadmap({ data, className = "" }: VisualRoadmapProps) {
   return (
     <div className={`relative ${className}`}>
       <div className="relative overflow-auto border-2 border-gray-200 rounded-xl bg-gradient-to-br from-blue-50 via-white to-teal-50 shadow-inner">
-        <svg
-          width={data.width}
-          height={data.height}
-          className="min-w-full min-h-full"
-          viewBox={`0 0 ${data.width} ${data.height}`}
-        >
+        <div className="flex justify-center min-h-[400px] p-4">
+          <div className="relative" style={{ width: data.width, height: data.height }}>
+            <svg
+              width={data.width}
+              height={data.height}
+              className="block"
+              viewBox={`0 0 ${data.width} ${data.height}`}
+            >
           {/* Render connections */}
           {data.connections.map((connection) => {
             const fromNode = nodeMap.get(connection.from)
@@ -99,10 +101,10 @@ export function VisualRoadmap({ data, className = "" }: VisualRoadmapProps) {
             if (!fromNode || !toNode) return null
             return getConnectionPath(fromNode, toNode, connection.type)
           })}
-        </svg>
+            </svg>
 
-        {/* Render nodes */}
-        {data.nodes.map((node) => {
+            {/* Render nodes */}
+            {data.nodes.map((node) => {
           const isCompleted = completedNodes.has(node.id)
           return (
             <Dialog key={node.id}>
@@ -205,7 +207,9 @@ export function VisualRoadmap({ data, className = "" }: VisualRoadmapProps) {
               </DialogContent>
             </Dialog>
           )
-        })}
+            })}
+          </div>
+        </div>
       </div>
 
       {/* Legend */}

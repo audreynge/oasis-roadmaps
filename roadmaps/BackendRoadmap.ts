@@ -22,7 +22,7 @@ export class VisualBackendRoadmap extends VisualRoadmap {
 
   initializeVisualRoadmap(): void {
     this.visualData.width = 1200
-    this.visualData.height = 1600
+    this.visualData.height = 1500
 
     // Start
     this.addNode(this.createNode("start", "START", "Begin your backend journey", "start", { x: 600, y: 50 }, [], 0))
@@ -53,21 +53,21 @@ export class VisualBackendRoadmap extends VisualRoadmap {
     this.addNode(
       this.createNode(
         "javascript",
-        "JavaScript (Advanced)",
+        "JavaScript",
         "Server-side JavaScript",
         "skill",
         { x: 600, y: 230 },
         [
           this.createResource(
-            "Advanced JavaScript",
+            "JavaScript",
             "Deep dive into JavaScript",
-            "https://javascript.info/",
+            "https://oasisneu.notion.site/JavaScript-179807275e48817ea69bc204e52417f3?pvs=25",
             "Course",
-            "Intermediate",
-            "30 hours",
+            "Beginner",
+            "2 hours",
           ),
         ],
-        40,
+        2,
       ),
     )
 
@@ -93,46 +93,25 @@ export class VisualBackendRoadmap extends VisualRoadmap {
       ),
     )
 
-    // Row 4: Version Control & Package Management
+    // Row 4: Version Control
     this.addNode(
       this.createNode(
         "git",
         "Git & GitHub",
         "Version control",
-        "tool",
-        { x: 450, y: 410 },
+        "skill",
+        { x: 600, y: 410 },
         [
           this.createResource(
             "Git Handbook",
             "Learn Git version control",
-            "https://guides.github.com/introduction/git-handbook/",
+            "https://oasisneu.notion.site/Oasis-Resources-Page-86e288dffdbd431faf13d9fa53e1ac4a?p=179807275e48811996f7dce1a0359a21&pm=c",
             "Documentation",
             "Beginner",
-            "8 hours",
+            "1 hour",
           ),
         ],
-        12,
-      ),
-    )
-
-    this.addNode(
-      this.createNode(
-        "npm",
-        "NPM",
-        "Package manager",
-        "tool",
-        { x: 750, y: 410 },
-        [
-          this.createResource(
-            "NPM Guide",
-            "Learn package management",
-            "https://docs.npmjs.com/getting-started",
-            "Documentation",
-            "Beginner",
-            "4 hours",
-          ),
-        ],
-        6,
+        1,
       ),
     )
 
@@ -163,20 +142,20 @@ export class VisualBackendRoadmap extends VisualRoadmap {
       this.createNode(
         "rest-api",
         "REST APIs",
-        "RESTful web services",
+        "Fetch data from servers",
         "skill",
         { x: 600, y: 590 },
         [
           this.createResource(
-            "REST API Design",
-            "Best practices for REST APIs",
-            "https://restfulapi.net/",
+            "Building a RESTful API",
+            "Understanding REST principles",
+            "https://oasisneu.notion.site/Building-A-RESTful-API-Oasis-Roster-179807275e488139a9a1f02fe4ff37ab?pvs=25",
             "Article",
             "Intermediate",
-            "10 hours",
+            "3 hours",
           ),
         ],
-        15,
+        3,
       ),
     )
 
@@ -333,7 +312,7 @@ export class VisualBackendRoadmap extends VisualRoadmap {
         "docker",
         "Docker",
         "Containerization",
-        "tool",
+        "skill",
         { x: 600, y: 1130 },
         [
           this.createResource(
@@ -354,90 +333,26 @@ export class VisualBackendRoadmap extends VisualRoadmap {
       this.createNode(
         "deployment",
         "Deployment",
-        "Cloud platforms & CI/CD",
-        "skill",
+        "Deployment platforms",
+        "topic",
         { x: 600, y: 1220 },
         [
           this.createResource(
-            "AWS Getting Started",
-            "Learn cloud deployment",
-            "https://aws.amazon.com/getting-started/",
+            "Netlify Deployment",
+            "Learn how to deploy your app on Netlify",
+            "https://oasisneu.notion.site/Deploy-your-site-179807275e4881e4bcc0e766119805fe",
             "Documentation",
             "Intermediate",
-            "15 hours",
+            "1 hour",
           ),
         ],
-        20,
-      ),
-    )
-
-    // Row 14: Advanced Topics (Optional)
-    this.addNode(
-      this.createNode(
-        "caching",
-        "Caching",
-        "Redis, performance",
-        "optional",
-        { x: 400, y: 1310 },
-        [
-          this.createResource(
-            "Redis Tutorial",
-            "Learn Redis caching",
-            "https://redis.io/docs/getting-started/",
-            "Documentation",
-            "Advanced",
-            "10 hours",
-          ),
-        ],
-        12,
-      ),
-    )
-
-    this.addNode(
-      this.createNode(
-        "monitoring",
-        "Monitoring",
-        "Logging & metrics",
-        "optional",
-        { x: 600, y: 1310 },
-        [
-          this.createResource(
-            "Application Monitoring",
-            "Learn monitoring best practices",
-            "https://www.datadoghq.com/knowledge-center/application-monitoring/",
-            "Article",
-            "Advanced",
-            "8 hours",
-          ),
-        ],
-        12,
-      ),
-    )
-
-    this.addNode(
-      this.createNode(
-        "microservices",
-        "Microservices",
-        "Distributed systems",
-        "optional",
-        { x: 800, y: 1310 },
-        [
-          this.createResource(
-            "Microservices Guide",
-            "Learn microservices architecture",
-            "https://microservices.io/",
-            "Article",
-            "Advanced",
-            "20 hours",
-          ),
-        ],
-        25,
+        1,
       ),
     )
 
     // End
     this.addNode(
-      this.createNode("end", "BACKEND DEVELOPER", "You're now a backend developer!", "end", { x: 600, y: 1400 }, [], 0),
+      this.createNode("end", "BACKEND DEVELOPER", "You're now a backend developer!", "end", { x: 600, y: 1350 }, [], 0),
     )
 
     // Clean linear connections
@@ -445,9 +360,7 @@ export class VisualBackendRoadmap extends VisualRoadmap {
     this.addConnection({ from: "internet-basics", to: "javascript", type: "required" })
     this.addConnection({ from: "javascript", to: "nodejs", type: "required" })
     this.addConnection({ from: "nodejs", to: "git", type: "required" })
-    this.addConnection({ from: "nodejs", to: "npm", type: "required" })
     this.addConnection({ from: "git", to: "express", type: "required" })
-    this.addConnection({ from: "npm", to: "express", type: "required" })
     this.addConnection({ from: "express", to: "rest-api", type: "required" })
     this.addConnection({ from: "rest-api", to: "sql-basics", type: "required" })
     this.addConnection({ from: "sql-basics", to: "postgresql", type: "alternative" })
@@ -458,12 +371,6 @@ export class VisualBackendRoadmap extends VisualRoadmap {
     this.addConnection({ from: "personal-access-tokens", to: "testing", type: "required" })
     this.addConnection({ from: "testing", to: "docker", type: "required" })
     this.addConnection({ from: "docker", to: "deployment", type: "required" })
-    this.addConnection({ from: "deployment", to: "caching", type: "optional" })
-    this.addConnection({ from: "deployment", to: "monitoring", type: "optional" })
-    this.addConnection({ from: "deployment", to: "microservices", type: "optional" })
-    this.addConnection({ from: "caching", to: "end", type: "optional" })
-    this.addConnection({ from: "monitoring", to: "end", type: "optional" })
-    this.addConnection({ from: "microservices", to: "end", type: "optional" })
     this.addConnection({ from: "deployment", to: "end", type: "required" })
   }
 }

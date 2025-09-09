@@ -61,7 +61,6 @@ export default function RoadmapPage({ params }: RoadmapPageProps) {
       frontend: 15,
       backend: 16,
       fullstack: 15,
-      "data-science": 14,
       ios: 13,
     }
     skillsCount = fallbackCounts[metadata.id] || 12

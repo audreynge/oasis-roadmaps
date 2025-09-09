@@ -23,7 +23,6 @@ export function RoadmapCard({ roadmap }: RoadmapCardProps) {
         visualRoadmap.initializeVisualRoadmap()
       }
 
-      // Get the visual data
       const visualData = visualRoadmap.getVisualData()
 
       // Count skill, topic, milestone, and tool nodes (exclude start/end)
@@ -73,7 +72,6 @@ export function RoadmapCard({ roadmap }: RoadmapCardProps) {
     frontend: "oasis-teal",
     backend: "oasis-green",
     fullstack: "oasis-orange",
-    "data-science": "oasis-yellow",
     ios: "bg-gradient-to-r from-blue-500 to-purple-600",
   }
 

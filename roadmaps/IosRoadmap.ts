@@ -22,7 +22,7 @@ export class VisualIOSRoadmap extends VisualRoadmap {
 
   initializeVisualRoadmap(): void {
     this.visualData.width = 1200
-    this.visualData.height = 1500
+    this.visualData.height = 1300
 
     // Start
     this.addNode(
@@ -35,19 +35,19 @@ export class VisualIOSRoadmap extends VisualRoadmap {
         "xcode",
         "Xcode & Setup",
         "iOS development environment",
-        "tool",
+        "skill",
         { x: 600, y: 140 },
         [
           this.createResource(
-            "Xcode Guide",
+            "Installing Xcode",
             "Getting started with Xcode IDE",
-            "https://developer.apple.com/xcode/",
+            "https://oasisneu.notion.site/Installing-Xcode-179807275e4881d1a52cf0f8cd411967?pvs=23",
             "Documentation",
             "Beginner",
-            "4 hours",
+            "2 hours",
           ),
         ],
-        8,
+        2,
       ),
     )
 
@@ -192,15 +192,15 @@ export class VisualIOSRoadmap extends VisualRoadmap {
         { x: 600, y: 680 },
         [
           this.createResource(
-            "Core Data Tutorial",
+            "Data Persistence",
             "Learn iOS data persistence",
-            "https://developer.apple.com/documentation/coredata",
+            "https://oasisneu.notion.site/Data-Persistence-179807275e488120bfe4c187ff0028f4?pvs=23",
             "Documentation",
             "Advanced",
-            "25 hours",
+            "3 hours",
           ),
         ],
-        35,
+        3,
       ),
     )
 
