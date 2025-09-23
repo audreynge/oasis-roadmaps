@@ -138,18 +138,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
             "Article",
             "Intermediate",
-            "4 hours",
-          ),
-          this.createResource(
-            "Flexbox Froggy",
-            "Interactive Flexbox game",
-            "https://flexboxfroggy.com/",
-            "Tool",
-            "Beginner",
             "2 hours",
           ),
         ],
-        6,
+        2,
       ),
     )
 
@@ -167,18 +159,10 @@ export class VisualFrontendRoadmap extends VisualRoadmap {
             "https://css-tricks.com/snippets/css/complete-guide-grid/",
             "Article",
             "Intermediate",
-            "5 hours",
-          ),
-          this.createResource(
-            "Grid Garden",
-            "Interactive CSS Grid game",
-            "https://cssgridgarden.com/",
-            "Tool",
-            "Beginner",
             "2 hours",
           ),
         ],
-        7,
+        2,
       ),
     )
 

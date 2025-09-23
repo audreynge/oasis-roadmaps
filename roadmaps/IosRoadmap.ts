@@ -73,29 +73,7 @@ export class VisualIOSRoadmap extends VisualRoadmap {
       ),
     )
 
-    // Row 3: Advanced Swift
-    this.addNode(
-      this.createNode(
-        "swift-advanced",
-        "Advanced Swift",
-        "Protocols, generics, memory management",
-        "skill",
-        { x: 600, y: 320 },
-        [
-          this.createResource(
-            "Advanced Swift",
-            "Deep dive into Swift concepts",
-            "https://www.objc.io/books/advanced-swift/",
-            "Book",
-            "Advanced",
-            "25 hours",
-          ),
-        ],
-        35,
-      ),
-    )
-
-    // Row 4: iOS Fundamentals
+    // Row 3: iOS Fundamentals
     this.addNode(
       this.createNode(
         "ios-fundamentals",
@@ -117,7 +95,7 @@ export class VisualIOSRoadmap extends VisualRoadmap {
       ),
     )
 
-    // Row 5: UI Framework Choice
+    // Row 4: UI Framework Choice
     this.addNode(
       this.createNode(
         "uikit",
@@ -160,7 +138,7 @@ export class VisualIOSRoadmap extends VisualRoadmap {
       ),
     )
 
-    // Row 6: Navigation & Layout
+    // Row 5: Navigation & Layout
     this.addNode(
       this.createNode(
         "navigation",
@@ -364,8 +342,7 @@ export class VisualIOSRoadmap extends VisualRoadmap {
     // Clean linear connections
     this.addConnection({ from: "start", to: "xcode", type: "required" })
     this.addConnection({ from: "xcode", to: "swift-basics", type: "required" })
-    this.addConnection({ from: "swift-basics", to: "swift-advanced", type: "required" })
-    this.addConnection({ from: "swift-advanced", to: "ios-fundamentals", type: "required" })
+    this.addConnection({ from: "swift-basics", to: "ios-fundamentals", type: "required" })
     this.addConnection({ from: "ios-fundamentals", to: "uikit", type: "alternative" })
     this.addConnection({ from: "ios-fundamentals", to: "swiftui", type: "alternative" })
     this.addConnection({ from: "uikit", to: "navigation", type: "required" })

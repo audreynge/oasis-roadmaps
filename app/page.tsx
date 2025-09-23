@@ -18,10 +18,10 @@ export default function RoadmapsPage() {
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <div className="flex items-center justify-center gap-6 mb-6">
-              <div className="w-16 h-16 oasis-green-dark rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 oasis-green-dark rounded-2xl flex items-center justify-center">
                 <Palmtree className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-oasis-green-dark drop-shadow-sm">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-oasis-green-dark">
                 Oasis Roadmaps
               </h1>
             </div>
@@ -31,7 +31,7 @@ export default function RoadmapsPage() {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
             <Card className="text-center bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl">
               <CardContent className="pt-6 pb-6">
                 <div className="w-12 h-12 oasis-hero-gradient rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
@@ -59,23 +59,14 @@ export default function RoadmapsPage() {
                 <div className="text-sm text-gray-600 font-medium">Skills</div>
               </CardContent>
             </Card>
-            <Card className="text-center bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl">
-              <CardContent className="pt-6 pb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-gray-800 mb-1">1000+</div>
-                <div className="text-sm text-gray-600 font-medium">Learners</div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Section Header */}
           <div className="mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-oasis-green-dark mb-4 text-center drop-shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-oasis-green-dark mb-4 text-center">
               Choose Your Learning Path
             </h2>
-            <p className="text-oasis-green-dark text-center text-lg max-w-2xl mx-auto drop-shadow-md">
+            <p className="text-oasis-green-dark text-center text-lg max-w-2xl mx-auto">
               Each roadmap is your personal guide through the tech landscape, with step-by-step guidance and practical projects.
             </p>
           </div>
@@ -112,7 +103,7 @@ export default function RoadmapsPage() {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-2 border-green-400 text-green-700 hover:bg-green-50 hover:border-green-500 bg-white/80 backdrop-blur-sm transition-all duration-200 w-full sm:w-auto text-base font-semibold px-8 py-3 rounded-xl"
+                  className="border-2 border-green-400 text-green-700 hover:text-black hover:bg-green-50 hover:border-green-500 bg-white/80 backdrop-blur-sm transition-all duration-200 w-full sm:w-auto text-base font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="https://oasisneu.com/about">Learn More</Link>
                 </Button>

@@ -453,8 +453,7 @@ export class VisualFullStackRoadmap extends VisualRoadmap {
     )
 
     // Clean linear connections
-    this.addConnection({ from: "start", to: "web-fundamentals", type: "required" })
-    this.addConnection({ from: "web-fundamentals", to: "html-css", type: "required" })
+    this.addConnection({ from: "start", to: "html-css", type: "required" })
     this.addConnection({ from: "html-css", to: "javascript", type: "required" })
     this.addConnection({ from: "javascript", to: "git", type: "required" })
     this.addConnection({ from: "git", to: "react", type: "required" })
